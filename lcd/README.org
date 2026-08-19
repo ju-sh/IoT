@@ -1,0 +1,5 @@
+# LCD display
+
+Program to display text on to an LCD display with backpack for I2C.
+
+Coudn't get this to work as the LCD display was faulty. Will try again.
