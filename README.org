@@ -1,0 +1,8 @@
+# IoT
+
+Programming microcontrollers.
+
+ - esp32: A basic esp32 setup
+ - servo: Control a servo motor
+ - lcd: Display text on an LCD screen
+ - mqtt: A demo for MQTT
