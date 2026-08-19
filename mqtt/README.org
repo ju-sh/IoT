@@ -1,0 +1,43 @@
+# MQTT demo
+
+ - Broker is run on the laptop.
+ - Uses Mosquitto library
+
+
+* Setting up
+Unblock network connections by editing
+=/etc/mosquitto/conf.d/local.conf=:
+
+#+begin_src 
+listener 1883
+allow_anonymous true
+#+end_src
+
+then restart mosquitto:
+
+#+begin_src 
+sudo systemctl restart mosquitto
+#+end_src
+
+* Running
+
+#+begin_src
+sudo mosquitto -v -c mqtt.conf
+#+end_src
+
+Publish with:
+
+#+begin_src 
+mosquitto_pub -h localhost -t "home/knob/percentage" -m "80"
+#+end_src
+
+Subscribe with:
+
+#+begin_src 
+$ mosquitto_sub -h localhost -t "home/knob/percentage" -v
+home/knob/percentage 80
+home/knob/percentage 80
+home/knob/percentage 80
+#+end_src
+
+
